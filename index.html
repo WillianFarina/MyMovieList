@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6add2463d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>MyMovieList App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">
+        <i class="fas fa-film"></i> My <span>Movie</span> List
+      </h1>
+      <form id="movie-form">
+        <div class="form-group">
+          <label for="title">Título</label>
+          <input type="text" class="form-control" id="title" />
+        </div>
+        <div class="form-group">
+          <label for="type">Tipo</label>
+          <select class="form-control" id="type">
+            <option value="Filme">Filme</option>
+            <option value="Série">Série</option>
+            <option value="Documentário">Documentário</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="streaming">Streaming</label>
+          <select class="form-control" id="streaming">
+            <option value="Netflix">Netflix</option>
+            <option value="Amazon Prime Video">Amazon Prime Video</option>
+            <option value="HBO GO">HBO GO</option>
+            <option value="Globoplay">Globoplay</option>
+            <option value="Telecine">Telecine</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+        <input type="submit" value="Adicionar" class="btn-lg mt-4 mb-4" />
+        <table class="table table-dark table-striped mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Streaming</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody id="movie-list"></tbody>
+        </table>
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
